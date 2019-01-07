@@ -25,7 +25,7 @@ app.get('/:scope/:name?', (req, res) => {
         ? getInfo.fromUrl(repository.url)
         : getInfo.fromUrl(repository)
 
-      res.end(info.browse())
+      res.redirect(info.browse())
     })
 })
 
